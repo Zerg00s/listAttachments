@@ -19,7 +19,7 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                 SP.SOD.executeFunc("jquery.js", "jQuery", function () {
                     //console && console.log("jquery loaded");
                     SP.SOD.loadMultiple(['sp.js', 'callout.js'], function () {
-                        console.log("callaout!!");
+                        // console.log("callaout!!");
                     });
 
                 });
@@ -50,7 +50,7 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                             if (result.d.results.length > 0) {
                                 var calloutContainer = jQuery("<div class='tooltip' idCallout='" + $(this.tr).attr('id') + "'></div>");
                                 calloutContainer.appendTo(this.tr);
-                                calloutContainer.append("<div ><h4><strong>Attachments</strong></h4</div>");
+                                calloutContainer.append("<div ><h4><strong><i class='fa fa-paperclip'></i>  Attachments</strong></h4</div>");
                                 for (var i = 0; i < result.d.results.length; i++) {
                                     var attachment = result.d.results[i];
                                     //console.log(attachment); 
