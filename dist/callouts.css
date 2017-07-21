@@ -34,7 +34,6 @@
     background-repeat: no-repeat;
     background-image: url(/_layouts/15/images/icgen.gif);
     padding-left: 20px;
-    margin-top: -2px;
 }
 .attachment-item a[href$=".docx"],
 .attachment-item a[href$=".doc"]{
