@@ -1,0 +1,10 @@
+{
+  "generator-sppp": {
+    "app.name": "list-attachments",
+    "sppp.version": "2.1.0",
+    "app.description": "list attachments",
+    "app.author": "Denis Molodtsov",
+    "conf.spFolder": "_catalogs/masterpage/attachments",
+    "conf.distFolder": "./dist"
+  }
+}
