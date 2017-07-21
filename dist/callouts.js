@@ -1,9 +1,11 @@
-// Denis Molodtsov 2017
-// Displays attachments callouts for list items
+/*
+    Denis Molodtsov 2017
+    Displays attachments callouts for list items
 
-// Deployment steps: 
-// 1) reference JSLink ~site/_catalogs/masterpage/attachments/callouts.js
-// 2) reference css file /_catalogs/masterpage/attachments/callouts.css
+    Deployment steps: 
+    1) reference JSLink ~site/_catalogs/masterpage/attachments/callouts.js
+    2) reference css file /_catalogs/masterpage/attachments/callouts.css
+*/
 
 SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
 
@@ -42,22 +44,14 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                             accept: "application/json;odata=verbose"
                         },
                         success: function (result) {
-                            $(this.tr).hover(handlerIn, handlerOut);
                             if (result.d.results.length > 0) {
                                 var calloutContainer = jQuery("<div class='tooltip' idCallout='" + $(this.tr).attr('id') + "'></div>");
                                 calloutContainer.appendTo(this.tr);
-                                calloutContainer.append("<div ><h4><strong><i class='fa fa-paperclip'></i>  Attachments</strong></h4</div>");
+                                calloutContainer.append("<div class='callout-header'><h4><strong><i class='fa fa-paperclip'></i>  Attachments</strong></h4</div>");
                                 for (var i = 0; i < result.d.results.length; i++) {
                                     var attachment = result.d.results[i];
                                     calloutContainer.append("<div class='attachment-item'><a href='" + attachment.ServerRelativeUrl + "'>" + attachment.FileName + "</a></div>");
                                 }
-                            }
-
-                            function handlerIn(event) {
-                                $("[idCallout='" + $(event.currentTarget).attr('id') + "']").show();
-                            }
-                            function handlerOut(event) {
-                                $("[idCallout='" + $(event.currentTarget).attr('id') + "']").hide();
                             }
 
                         }
