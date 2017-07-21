@@ -1,65 +1,36 @@
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+div.js-callout-mainElement {box-sizing: content-box;}
+	.js-callout-beakLeft, .js-callout-beakRight, .js-callout-beakTop, .js-callout-beakBottom {
+		background-color: aliceblue;
+	}
 
-.tooltip{
-    display: none;
-    position: absolute;
-    opacity: 0;
-}
+	.js-callout-content {
+		background-color: aliceblue;
+		width: 500px !important;
+	}
+	
+	ul.attachments, ul.attachments li {position:relative;padding:0;margin:0;list-style:none; }
+	ul.attachments li {padding-left:30px;margin:15px 0;}
 
-.callout-header{
-    padding-bottom: 10px;
-    border-bottom: solid 1px #cccccc;
-}
-
-.ms-itmHoverEnabled:hover .tooltip{
-    opacity: 1;
-    display: block;
-    border-radius: 10px;
-    margin-left:-10px;
-    background-color:#fff;
-    border:1px solid #d1d1d1;
-    padding:10px 20px 15px 20px;
-    box-shadow:0px 1px 4px #cccccc;
-    white-space: nowrap;
-    background-color: white;
-}
-
-.attachment-item{
-    padding-top:3px;
-}
-
-
-/* file links */
-.attachment-item a{
-    background-repeat: no-repeat;
-    background-image: url(/_layouts/15/images/icgen.gif);
-    padding-left: 20px;
-}
-.attachment-item a[href$=".docx"],
-.attachment-item a[href$=".doc"]{
-	background-image: url(/_layouts/15/images/icdocx.png);
-}
-.attachment-item a[href$=".xlsx"]{
-	background-image: url(/_layouts/15/images/icxlsx.png);	
-}
-.attachment-item a[href$=".txt"]{
-	background-image: url(/_layouts/15/images/ictxt.gif);	
-}
-.attachment-item a[href$=".vsdx"]{
-	background-image: url(/_layouts/15/images/icvsdx.gif);	
-}
-.attachment-item a[href$=".pdf"],
-.attachment-item a[href$=".PDF"]{
-	background-image: url(/_layouts/15/images/icpdf.png);	
-}
-
-.attachment-item a[href$=".xlsm"]{
-	background-image: url(/_layouts/15/images/icxlsm.png);	
-}
-.attachment-item a[href$=".jpg"]{
-	background-image: url(/_layouts/15/images/icjpg.gif);	
-}
-
-.attachment-item a[href$=".png"]{
-	background-image: url(/_layouts/15/images/icpng.gif);	
-}
+	ul.attachments li a::before {
+		position:absolute;
+		width:25px;
+		height:27px;
+		display:;
+		left: 0px;
+		top:0;
+		overflow:hidden;
+	}	
+	ul.attachments li a[href$='.pdf']::before {
+		content: url('/SiteAssets/Branding/icons/filetypes/pdf.png');
+	}	
+	ul.attachments li a[href$='.docx']::before, ul.attachments li a[href$='.doc']::before {
+		content: url('/SiteAssets/Branding/icons/filetypes/docx.png');
+	}	
+	ul.attachments li a[href$='.pdf']::before {
+		content: url('/SiteAssets/Branding/icons/filetypes/pdf.png');
+	}
+	.callout-section > div >span {
+		width:180px;
+		font-weight:bold;
+		display:inline-block;
+	}
