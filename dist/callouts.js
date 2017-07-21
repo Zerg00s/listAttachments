@@ -23,7 +23,7 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                         SP.SOD.executeFunc("callout.js", "Callout", AttachHoverEvent);
                     });
                 })
-
+               
                 var launchPointTd;
                 var calloutBody = "";
                 var title = "";
@@ -75,7 +75,7 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                         calloutBody = "<div class=\"ms-soften\" style=\"margin-top:13px;\">"
 					    + "<hr/></div>"
 					    + "<div class=\"callout-section\" style=\"margin-top:13px;\">";
-                        calloutBody += "<div  class=\"SequentialNumber\">" + params.listItem.get_item("SequentialNumber") + "</div>";
+                        //calloutBody += "<div  class=\"SequentialNumber\">" + params.listItem.get_item("SequentialNumber") + "</div>";
 
                         calloutBody += "<div  class=\"Department\"><span>Department:</span>" + params.listItem.get_item("Department").get_lookupValue() + "</div>";
                         calloutBody += "<div  class=\"SequentialNumber\"><span>Sequential Number:</span>" + params.listItem.get_item("SequentialNumber") + "</div>";
