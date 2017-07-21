@@ -34,6 +34,7 @@
     background-repeat: no-repeat;
     background-image: url(/_layouts/15/images/icgen.gif);
     padding-left: 20px;
+    margin-top: -2px;
 }
 .attachment-item a[href$=".docx"],
 .attachment-item a[href$=".doc"]{
@@ -57,5 +58,9 @@
 	background-image: url(/_layouts/15/images/icxlsm.png);	
 }
 .attachment-item a[href$=".jpg"]{
-	background-image: url(/_layouts/15/images/icxlsm.png);	
+	background-image: url(/_layouts/15/images/icjpg.gif);	
+}
+
+.attachment-item a[href$=".png"]{
+	background-image: url(/_layouts/15/images/icpng.gif);	
 }

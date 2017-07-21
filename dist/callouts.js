@@ -26,10 +26,6 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                 });
 
             },
-
-            Templates: {
-            },
-
             OnPostRender: function (ctx) {
                 var rows = ctx.ListData.Row;
                 for (var i = 0; i < rows.length; i++) {
@@ -43,19 +39,22 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
                         headers: {
                             accept: "application/json;odata=verbose"
                         },
-                        success: function (result) {
-                            if (result.d.results.length > 0) {
-                                var calloutContainer = jQuery("<div class='tooltip' idCallout='" + $(this.tr).attr('id') + "'></div>");
-                                calloutContainer.appendTo(this.tr);
-                                calloutContainer.append("<div class='callout-header'><h4><strong><i class='fa fa-paperclip'></i>  Attachments</strong></h4</div>");
-                                for (var i = 0; i < result.d.results.length; i++) {
-                                    var attachment = result.d.results[i];
-                                    calloutContainer.append("<div class='attachment-item'><a href='" + attachment.ServerRelativeUrl + "'>" + attachment.FileName + "</a></div>");
-                                }
-                            }
-
-                        }
+                        success: success
                     })
+                }
+
+
+                function success(result) {
+                    if (result.d.results.length > 0) {
+                        var calloutContainer = jQuery("<div class='tooltip' idCallout='" + $(this.tr).attr('id') + "'></div>");
+                        calloutContainer.appendTo(this.tr);
+                        calloutContainer.append("<div class='callout-header'><h4><strong><i class='fa fa-paperclip'></i>  Attachments</strong></h4</div>");
+                        for (var i = 0; i < result.d.results.length; i++) {
+                            var attachment = result.d.results[i];
+                            calloutContainer.append("<div class='attachment-item'><a href='" + attachment.ServerRelativeUrl + "'>" + attachment.FileName + "</a></div>");
+                        }
+                    }
+
                 }
 
             },
