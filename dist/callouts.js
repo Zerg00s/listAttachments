@@ -66,7 +66,7 @@ SP.SOD.executeFunc("clienttemplates.js", "SPClientTemplates", function () {
 
             },
 
-            ListTemplateType: 100
+            //ListTemplateType: 100
 
         });
     }
