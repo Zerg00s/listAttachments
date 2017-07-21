@@ -1,20 +1,18 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-.tooltip{
- padding:10px;  
- display: none;
- position: relative;
-}
 
+.tooltip{
+    padding:10px;  
+    display: none;
+    position: relative;
+}
 
 .ms-itmHoverEnabled:hover .tooltip{
     display: block;
     border-radius: 10px;
     position: absolute;
     margin-left:-10px;
-    /*left:240px;*/
-    /*margin-top:23px;*/
-/* [ReplaceColor(themeColor:"BackgroundOverlay",opacity:"1")] */ background-color:#fff;
-/* [ReplaceColor(themeColor:"DialogBorder")] */ border:1px solid #d1d1d1;
+    background-color:#fff;
+    border:1px solid #d1d1d1;
     padding:20px;
     box-shadow:0px 1px 4px #cccccc;
     white-space: nowrap;
@@ -24,8 +22,3 @@
 .attachment-item{
     padding-top:3px;
 }
-.attachment-item .fa{
-    color:blue !important;
-}
-
-
